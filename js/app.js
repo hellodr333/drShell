@@ -23,7 +23,7 @@ app.controller('myCtrl',function($scope,$sce){
 	$scope.keypPress = function($event){
 		var oldMsgBox = document.getElementById('oldMsgBox');	
 		var bFind = false;	
-		if($event.charCode==13){
+		if($event.charCode==13 ||$event.keyCode==13){
 			for(var i=0;i<$scope.folderJson.length;i++){
 				if($scope.source == $scope.folderJson[i].title){
 					bFind = true;
