@@ -12,11 +12,11 @@ app.controller('myCtrl',function($scope,$sce){
 	};
 	//文件夹
 	$scope.folderJson = [
-							{src:'images/picswall/6.png',url:'http://hellodr333.github.io/form-validate/',title:'store'},
-							{src:'images/picswall/6.png',url:'http://hellodr333.github.io/form-validate/',title:'CSS'},
-							{src:'images/picswall/6.png',url:'http://hellodr333.github.io/form-validate/',title:'app'},
-							{src:'images/picswall/6.png',url:'http://hellodr333.github.io/form-validate/',title:'Work'},
-							{src:'images/picswall/6.png',url:'http://hellodr333.github.io/form-validate/',title:'info'},
+							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/form-validate/',title:'store'},
+							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/form-validate/',title:'CSS'},
+							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/form-validate/',title:'app'},
+							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/form-validate/',title:'Work'},
+							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/form-validate/',title:'info'},
 						] ;
 
 	// 命令行
