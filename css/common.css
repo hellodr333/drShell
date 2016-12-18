@@ -10,7 +10,7 @@ img, input{border:none;}
 .fr{ float:right;display:inline; }
 .clearFix:after{ content:""; display:block; clear:both; }
 .clearFix{zoom:1;}
- body{font-family: "微软雅黑";font-style: normal;font-size:14px;overflow:hidden;color:white;}
+ body{font-family: "微软雅黑";font-style: normal;font-size:14px;overflow:hidden;color:white;height:100%;}
 
 
  /*shellBox*/
