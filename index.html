@@ -4,58 +4,67 @@
 <title>drShell</title>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript">
+  function load(){
+    var tototoBox = document.getElementById('tototoBox');
+
+    tototoBox.style.display='none';
+  };
+</script>
 </head>
-<body ng-controller="myCtrl" ng-keypress="keypPress($event)">
-    <div class="shellBox" id="shellBox">
-        <div class="l"></div>
-        <div class="t"></div>
-        <div class="r"></div>
-        <div class="b"></div>
-        <div class="lt"></div>
-        <div class="rt"></div>
-        <div class="rb"></div>
-        <div class="lb"></div>
-        <div class="h" id="shellHead">
-          <span class="iconl">MINGW64:/c/Users/丁蓉</span>
-        </div>
-        <div class="can" id="msgBox">
-          <div id="oldMsgBox" class="oldMsgBox">
+<body ng-controller="myCtrl" ng-keypress="keypPress($event)" onload="load()">
+    <img src="./images/bg.jpg" alt="" width="100%" class="loadImg">
+    <div class="tototoBox" id="tototoBox">
+        <div class="shellBox" id="shellBox">
+          <div class="l"></div>
+          <div class="t"></div>
+          <div class="r"></div>
+          <div class="b"></div>
+          <div class="lt"></div>
+          <div class="rt"></div>
+          <div class="rb"></div>
+          <div class="lb"></div>
+          <div class="h" id="shellHead">
+            <span class="iconl">MINGW64:/c/Users/丁蓉</span>
           </div>
-          <div class="msgs">
-                <p>自然的卷卷@LAPTOP-VLJVB4J8</p>
-                <span>&nbsp;$</span><input ng-model="source" id="ipt" class="ipt"  border="none" type="text" name="" autofocus="true" placeholder="键入左侧文件夹名称并按 enter键查看">
+          <div class="can" id="msgBox">
+            <div id="oldMsgBox" class="oldMsgBox">
+            </div>
+            <div class="msgs">
+                  <p>自然的卷卷@LAPTOP-VLJVB4J8</p>
+                  <span>&nbsp;$</span><input ng-model="source" id="ipt" class="ipt"  border="none" type="text" name="" autofocus="true" placeholder="键入左侧文件夹名称并按 enter键查看">
+            </div>
           </div>
-        </div>
+      </div>
+
+      <!--网页盒子-->
+      <div class="pageBox" id="pageBox" ng-show="isShow()">
+          <div class="l"></div>
+          <div class="t"></div>
+          <div class="r"></div>
+          <div class="b"></div>
+          <div class="lt"></div>
+          <div class="rt"></div>
+          <div class="rb"></div>
+          <div class="lb"></div>
+          <div class="h" id="pageHead">
+              <p class="iconr">
+                   <span class="small" id="toSmall"></span>
+                    <span class="big" id="toBig"></span>
+                    <span class="close" ng-click="changeShow()"></span>
+              </p>
+          </div>
+          <div class="can">
+              <iframe ng-src="{{toWhere}}" frameborder="0"></iframe> 
+          </div>
+      </div>
+      
+      <!-- 文件夹 -->
+      <ul class="folders" id="folders">
+         <li ng-dblclick="showFromFolder($index)" ng-repeat="item in folderJson"><div><img ng-src="{{item.src}}" alt=""></div><p ng-bind="item.title"></p></li>
+     </ul>
     </div>
 
-    <!--网页盒子-->
-    <div class="pageBox" id="pageBox" ng-show="isShow()">
-        <div class="l"></div>
-        <div class="t"></div>
-        <div class="r"></div>
-        <div class="b"></div>
-        <div class="lt"></div>
-        <div class="rt"></div>
-        <div class="rb"></div>
-        <div class="lb"></div>
-        <div class="h" id="pageHead">
-            <p class="iconr">
-                 <span class="small" id="toSmall"></span>
-                  <span class="big" id="toBig"></span>
-                  <span class="close" ng-click="changeShow()"></span>
-            </p>
-        </div>
-        <div class="can">
-            <iframe ng-src="{{toWhere}}" frameborder="0"></iframe> 
-        </div>
-    </div>
-    
-    <!-- 文件夹 -->
-    <ul class="folders" id="folders">
-       <li ng-dblclick="showFromFolder($index)" ng-repeat="item in folderJson"><div><img ng-src="{{item.src}}" alt=""></div><p ng-bind="item.title"></p></li>
-   </ul>
-
-</div>
 
 <script type="text/javascript" src="js/angular.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
