@@ -12,27 +12,27 @@ app.controller('myCtrl',function($scope,$sce){
 	};
 	//文件夹
 	$scope.folderJson = [
-							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/form-validate/',title:'store'},
-							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/form-validate/',title:'CSS'},
-							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/form-validate/',title:'app'},
-							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/form-validate/',title:'Work'},
+							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/music/',title:'music'},
+							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/CSSPrj1/',title:'css'},
+							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/file/',title:'mbApp'},
+							{src:'images/picswall/6.png',url:'http://www.lubansoft.com/',title:'luban'},
 							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/form-validate/',title:'info'},
 						] ;
 
 	// 命令行
 	$scope.keypPress = function($event){
 		var oldMsgBox = document.getElementById('oldMsgBox');	
+		var msgBox = document.getElementById('oldMsgBox');
 		var bFind = false;	
 		if($event.charCode==13 ||$event.keyCode==13){
 			for(var i=0;i<$scope.folderJson.length;i++){
-				if($scope.source == $scope.folderJson[i].title){
+				if(angular.lowercase($scope.source) == $scope.folderJson[i].title){
 					bFind = true;
 					$scope.bShow = true;
 					$scope.toWhere = $scope.folderJson[i].url;
 					$scope.toWhere = $sce.trustAsResourceUrl($scope.toWhere);
-					shellBox.css('right','0');
 					oldMsgBox.innerHTML+='<div><p>自然的卷卷@LAPTOP-VLJVB4J8</p><div>&nbsp;&nbsp;<span>$</span>'+$scope.folderJson[i].title+'</div></div>';
-					console.log(oldMsgBox.innerHTML)
+					document.getElementById('shellBox').style.right = 0;
 					$scope.source = '';
 					$scope.folderJson[i].src = 'images/picswall/'+i+'.png';
 					
@@ -45,7 +45,9 @@ app.controller('myCtrl',function($scope,$sce){
 			
 		}
 
-		/* */
+		if(msgBox.offsetHeight>300){
+			oldMsgBox.innerHTML = '';
+		}
 
 	};
 

@@ -170,7 +170,7 @@ window.onload = function(){
 		ipt.focus();
 	}
 
-	drag(shellHead);
+	/*drag(shellHead);*/
 	var commomIndex = 30;
 	addEvent(shellHead,'mousedown',function(){
 			var arr=[];
