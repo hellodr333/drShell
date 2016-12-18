@@ -15,8 +15,8 @@ app.controller('myCtrl',function($scope,$sce){
 							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/music/',title:'music'},
 							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/CSSPrj1/',title:'css'},
 							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/file/',title:'mbApp'},
-							{src:'images/picswall/6.png',url:'https://www.lubansoft.com/',title:'luban'},
-							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/form-validate/',title:'info'},
+							{src:'images/picswall/6.png',url:'https://www.lubansoft.com/',title:'luban'}/*,
+							{src:'images/picswall/6.png',url:'https://hellodr333.github.io/form-validate/',title:'info'},*/
 						] ;
 
 	// 命令行
