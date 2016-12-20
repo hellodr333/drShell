@@ -4,21 +4,12 @@
 <title>drShell</title>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/common.css">
-<script type="text/javascript">
-  function load(){
-    var aTototoBox = document.getElementsByTagName('tototoBox');
-    for(var i=0;i<aTototoBox.length;i++){
-      aTototoBox[i].style.opacity=0;
-    }          
-  };
-</script>
 </head>
-<body ng-controller="myCtrl" ng-keypress="keypPress($event)" onready="load()">
+<body ng-controller="myCtrl" ng-keypress="keypPress($event)">
    
-    <div class="loading" style="width:100%;height:100%" id="loading"> 
-    </div>
-    
-        <div class="shellBox tototoBox" id="shellBox">
+
+
+        <div class="shellBox" id="shellBox">
           <div class="l"></div>
           <div class="t"></div>
           <div class="r"></div>
@@ -41,7 +32,7 @@
       </div>
 
       <!--网页盒子-->
-      <div class="pageBox tototoBox" id="pageBox" ng-show="isShow()">
+      <div class="pageBox" id="pageBox" ng-show="isShow()">
           <div class="l"></div>
           <div class="t"></div>
           <div class="r"></div>
@@ -63,7 +54,7 @@
       </div>
       
       <!-- 文件夹 -->
-      <ul class="folders tototoBox" id="folders">
+      <ul class="folders" id="folders">
          <li ng-dblclick="showFromFolder($index)" ng-repeat="item in folderJson"><div><img ng-src="{{item.src}}" alt=""></div><p ng-bind="item.title"></p></li>
      </ul>
 

@@ -160,13 +160,7 @@ function move(obj,json,optional){
 }
 
 window.onload = function(){
-	var aTototoBox = document.getElementsByTagName('tototoBox');
-	 for(var i=0;i<aTototoBox.length;i++){
-      aTototoBox[i].style.opacity=1;
-    }  
-	var loading = document.getElementById('loading');
-		loading.style.opacity=0;
-		 
+	
 	//shallbox 拖拽
 	var shellBox=document.getElementById('shellBox');
 	var shellHead=document.getElementById('shellHead');
