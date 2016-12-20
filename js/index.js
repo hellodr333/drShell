@@ -164,8 +164,8 @@ window.onload = function(){
 	 for(var i=0;i<aTototoBox.length;i++){
       aTototoBox[i].style.opacity=1;
     }  
-	var img = document.getElementById('loadImg');
-		img.style.opacity=0;
+	var loading = document.getElementById('loading');
+		loading.style.opacity=0;
 		 
 	//shallbox 拖拽
 	var shellBox=document.getElementById('shellBox');
